@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ricajust <ricajust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 0021/07/29 23:30:12 by da-silv           #+#    #+#             */
-/*   Updated: 2021/08/05 21:51:07 by ricajust         ###   ########.fr       */
+/*   Created: 2021/08/05 19:56:54 by ricajust          #+#    #+#             */
+/*   Updated: 2021/08/05 22:49:48 by ricajust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int	main(void)
 {
-	size_t	i;
+	unsigned char	*address;
+	char			little[3] = "car";
+	char			big[7] = "Ricardo";
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	address = ft_strnstr(big, little, 4);
+	//printf("Variable content: %s\n", address);
+	// printf("Variable address: %d\n", *address);
 }
