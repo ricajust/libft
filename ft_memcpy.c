@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ricajust <ricajust@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/04 19:22:15 by ricajust          #+#    #+#             */
-/*   Updated: 2021/08/07 18:32:03 by ricajust         ###   ########.fr       */
+/*   Created: 2021/08/07 17:28:30 by ricajust          #+#    #+#             */
+/*   Updated: 2021/08/09 22:45:38 by rda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *str, int c, size_t n)
+void	*ft_memcpy(void *restrict dt, const void *restrict sr, size_t n)
 {
 	size_t	i;
 
 	i = 0;
 	while (i <= n)
 	{
-		((unsigned char *)str)[i] = c;
+		((unsigned char *)dt)[i] = ((unsigned char *)sr)[i];
+		i++;
 	}
-	return (str);
+	return (dt);
 }

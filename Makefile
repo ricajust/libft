@@ -3,18 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ricajust <ricajust@student.42.fr>          +#+  +:+       +#+         #
+#    By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 0021/07/29 22:47:16 by da-silv           #+#    #+#              #
-#    Updated: 2021/08/05 19:59:52 by ricajust         ###   ########.fr        #
+#    Updated: 2021/08/09 22:39:42 by rda-silv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 SRC	=	ft_isalnum.c ft_isalpha.c ft_isascii.c\
-		ft_isdigit.c ft_isprint.c ft ft_strchr.c\
-		ft_strlen.c ft_strncmp.c ft ft_strrchr.c\
-		ft_tolower.c ft_toupper.c ft_strcpy
+		ft_isdigit.c ft_isprint.c ft_memset.c \
+		ft_memcpy.c
 		
 
 OBJ	=	$(SRC:.c=.o)
@@ -25,6 +24,8 @@ CFLAGS	=	-Wall -Werror -Wextra
 
 NAME	=	libft.a
 
+INCLUDE = libft.h
+
 rm	=	rm -f
 
 LIB	=	ar rc
@@ -34,8 +35,8 @@ all:	$(NAME)
 .c.o: 
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
-$(NAME):	$(OBJ) libft.h
-	ar rc $(NAME) $(OBJ)
+$(NAME):	$(OBJ) $(INCLUDE)
+	$(LIB) $(NAME) $(OBJ)
 
 clean: 
 	$(RM) $(OBJ)
@@ -45,4 +46,7 @@ fclean: clean
 
 re:	fclean	all
 
+runw:
+	bash libft-war-machine/grademe.sh
+	
 .PHONY: all clear re fclean

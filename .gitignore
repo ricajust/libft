@@ -1,2 +1,4 @@
 *.out
-#test*
+*.code-workspace
+/libft-war-machine
+.vscode/*
