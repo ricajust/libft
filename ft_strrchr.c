@@ -6,7 +6,7 @@
 /*   By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 20:36:55 by rda-silv          #+#    #+#             */
-/*   Updated: 2021/08/10 20:36:56 by rda-silv         ###   ########.fr       */
+/*   Updated: 2021/08/14 13:39:40 by rda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	int	i;
 
 	i = ft_strlen(s);
-	while ((s[i] != 0) && (s[i] != (char)c))
+	printf("\nTamanho da bagaca: %d\n\n", i);
+	while (i > 0)
+	{
+		printf("\nCaracter da string x entrada: %c - %c\n\n", s[i], c);
+		if (s[i] == (unsigned char)c)
+			return ((char *)s + i);
 		i--;
-	if (s[i] == (char)c)
+	}
+	if (c == '\0')
 		return ((char *)s + i);
-	else
-		return (0);
+	return (NULL);
 }

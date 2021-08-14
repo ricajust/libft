@@ -5,11 +5,11 @@ char	*ft_strrchr(const char *s, int c);
 
 int main () {
    int len;
-   const char str[] = "http://www.tutorialspoint.com";
-   const char ch = '.';
+   const char str[] = "Juliana";
+   const char ch = 'i';
    char *ret;
 
-   ret = strrchr(str, ch);
+   ret = ft_strrchr(str, ch);
 
    printf("String after |%c| is - |%s|\n", ch, ret);
    
