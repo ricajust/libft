@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ricajust <ricajust@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/05 19:52:18 by ricajust          #+#    #+#             */
-/*   Updated: 2021/08/05 21:46:54 by ricajust         ###   ########.fr       */
+/*   Created: 2021/08/10 21:39:17 by rda-silv          #+#    #+#             */
+/*   Updated: 2021/08/10 22:23:08 by rda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+size_t	strlcpy(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (i < size)
 	{
-		dest[i] = src[i];
+		((char *)dest)[i] = ((char *)src)[i];
 		i++;
 	}
 	dest[i] = '\0';
-	return ((char *)dest);
+	return (dest);
 }
