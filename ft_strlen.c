@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/10 20:36:45 by rda-silv          #+#    #+#             */
-/*   Updated: 2021/08/10 20:36:46 by rda-silv         ###   ########.fr       */
+/*   Created: 2021/08/14 17:16:06 by rda-silv          #+#    #+#             */
+/*   Updated: 2021/08/14 17:16:10 by rda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (s[i] != 0)
 		i++;
 	return (i);
 }

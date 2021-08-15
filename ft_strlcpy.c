@@ -1,27 +1,34 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/10 21:39:17 by rda-silv          #+#    #+#             */
-/*   Updated: 2021/08/14 14:11:00 by rda-silv         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+/* ************************************************************************* */
+/*                                                                           */
+/*                                                       :::      ::::::::   */
+/*   ft_strlcpy.c                                      :+:      :+:    :+:   */
+/*                                                   +:+ +:+         +:+     */
+/*   By: rda-silv <rda-silv@student.42sp.org.br>   +#+  +:+       +#+        */
+/*                                               +#+#+#+#+#+   +#+           */
+/*   Created: 2021/08/14 17:02:44 by rda-silv         #+#    #+#             */
+/*   Updated: 2021/08/14 17:02:46 by rda-silv        ###   ########.fr       */
+/*                                                                           */
+/* ************************************************************************* */
 
 #include "libft.h"
 
-size_t	strlcpy(char *dest, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
+	size_t	sizedest;
 
+	if (!dst && !src)
+		return (0);
+	sizedest = ft_strlen(src);
 	i = 0;
-	while (i < size)
+	if (dstsize > 0)
 	{
-		((char *)dest)[i] = ((char *)src)[i];
-		i++;
+		while (src[i] && i < (dstsize - 1))
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (sizedest);
 }
