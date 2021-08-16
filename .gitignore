@@ -1,4 +1,6 @@
 *.out
 *.code-workspace
+*.o
 /libft-war-machine
+/libftTester
 .vscode/*
