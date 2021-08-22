@@ -6,7 +6,7 @@
 /*   By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 0021/07/29 22:48:50 by da-silv           #+#    #+#             */
-/*   Updated: 2021/08/22 11:21:29 by rda-silv         ###   ########.fr       */
+/*   Updated: 2021/08/22 18:57:10 by rda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,6 @@ int				ft_isprint(int c);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
 void			*ft_calloc(size_t nmemb, size_t size);
-char			*ft_strdup(const char *s);
+char			*ft_strdup(const char *str);
 
 #endif

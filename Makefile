@@ -6,7 +6,7 @@
 #    By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 0021/07/29 22:47:16 by da-silv           #+#    #+#              #
-#    Updated: 2021/08/15 22:16:25 by rda-silv         ###   ########.fr        #
+#    Updated: 2021/08/22 18:56:21 by rda-silv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ SRCS		=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c\
 				ft_isprint.c ft_toupper.c ft_tolower.c ft_strlen.c\
 				ft_strlcat.c ft_strlcpy.c ft_strchr.c ft_strrchr.c \
 				ft_strncmp.c ft_strnstr.c ft_memset.c ft_memcpy.c ft_memchr.c\
-				ft_memcmp.c ft_memmove.c \
+				ft_memcmp.c ft_memmove.c ft_bzero.c ft_atoi.c ft_calloc.c\
+				ft_strdup.c\
 
 OBJ	=	$(SRCS:.c=.o)
 
