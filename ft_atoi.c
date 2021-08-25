@@ -6,7 +6,7 @@
 /*   By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 23:03:31 by rda-silv          #+#    #+#             */
-/*   Updated: 2021/08/22 10:28:59 by rda-silv         ###   ########.fr       */
+/*   Updated: 2021/08/24 22:40:15 by rda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,51 +20,27 @@ int	ft_checkspace(char c)
 	return (0);
 }
 
-int	ft_checksignal(char c)
-{
-	if (c == '+' || c == '-')
-	{
-		if (c == '-')
-			return (-1);
-	}
-	return (0);
-}
-
-int	ft_checknumber(const char *c, int i)
-{
-	int		number;
-
-	number = 0;
-	while (ft_isdigit(c[i]))
-	{
-		number *= 10;
-		number += (c[i] - 48);
-		i++;
-	}
-	return (number);
-}
-
 int	ft_atoi(const char *str)
 {
 	size_t			i;
-	unsigned int	number;
+	int				number;
 	int				signal;
 
 	i = 0;
+	signal = 1;
 	number = 0;
 	while (ft_checkspace(str[i]))
 		i++;
-	signal = ft_checksignal(str[i]);
-	if (signal)
-		i++;
-	number = ft_checknumber(str, i);
-	if (number)
+	if (str[i] == '+' || str[i] == '-')
 	{
-		if (signal == -1)
-			return (number * signal);
-		else
-			return (number);
+		if (str[i] == '-')
+			signal = -1;
+		i++;
 	}
-	else
-		return (0);
+	while (ft_isdigit(str[i]))
+	{
+		number = number * 10 + (str[i] - 48);
+		i++;
+	}
+	return ((int)(number * signal));
 }
