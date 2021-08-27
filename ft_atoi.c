@@ -6,13 +6,13 @@
 /*   By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 23:03:31 by rda-silv          #+#    #+#             */
-/*   Updated: 2021/08/24 22:40:15 by rda-silv         ###   ########.fr       */
+/*   Updated: 2021/08/27 07:56:41 by rda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_checkspace(char c)
+static int	ft_checkspace(char c)
 {
 	if (c == ' ' || c == '\n' || c == '\t' || c == '\v' || c == '\r'
 		|| c == '\f')
