@@ -6,7 +6,7 @@
 /*   By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 0021/07/29 22:48:50 by da-silv           #+#    #+#             */
-/*   Updated: 2021/08/27 07:31:14 by rda-silv         ###   ########.fr       */
+/*   Updated: 2021/08/28 12:59:27 by rda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -311,8 +311,25 @@ void	*ft_calloc(size_t nitems, size_t size);
 
 
 /* PART 2 */
+// CUSTOM FUNCTIONS: LIBFT.H
 
+/**
+ * @brief The ft_substr() function creates a substring from the main string.For
+ *  this it allocates the memory and delimits the substring starting at the 
+ * value of start up to the informed length 
+ * @param s const char pointer - this variable represent the main string
+ * @param start unsigned int - this variable represent the substring start
+ * @param len size_t - this variable represent the substring length
+ * @return The ft_substr() function returns the substring when its content is 
+ * different from null, otherwise the return is NULL if the allocation fails.
+ */
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+/**
+ * 
+ */
+char	*ft_strjoin(char const *s1, char const *s2);
+
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putchar_fd(char c, int fd);
 
