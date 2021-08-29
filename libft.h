@@ -6,7 +6,7 @@
 /*   By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 0021/07/29 22:48:50 by da-silv           #+#    #+#             */
-/*   Updated: 2021/08/28 12:59:27 by rda-silv         ###   ########.fr       */
+/*   Updated: 2021/08/29 17:01:46 by rda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 /* PART 1 */
 //STRING OPERATIONS: STRING.H
 //Copy
-
 /**
  * @brief The ft_memcpy() function copies n characters from memory area src to 
  * memory area dest.
@@ -29,8 +28,7 @@
  * @param n This is the number of bytes to be copied.
  * @return This function returns a destination pointer (dest).
  */
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-
+void		*ft_memcpy(void *dest, const void *src, size_t n);
 /**
  * @brief The ft_memccpy() function copies 0 or more characters of src to dest,
  *  halting when the character c has been copied or when count characters have 
@@ -43,8 +41,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
  * char in dest that immediately follows the character. If c is not copied, it 
  * returns NULL.
  */
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
-
+void		*ft_memccpy(void *dest, const void *src, int c, size_t n);
 /**
  * @brief The ft_memmove() function copies n characters from src to dest, but 
  * for overlapping memory blocks, ft_memmove() is a safer approach than 
@@ -56,8 +53,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
  * @param n This is the number of bytes to be copied.
  * @return This function returns a destination pointer (dest).
  */
-void	*ft_memmove(void *dest, const void *src, size_t n);
-
+void		*ft_memmove(void *dest, const void *src, size_t n);
 /**
  * @brief The ft_strlcpy() function copies the null-terminated string from src 
  * to dest (up to character size). The function ensures that the destination 
@@ -69,11 +65,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
  * @return The strlcpy() function returns the total length of the string you 
  * tried to create. This is simply the length of the Origin (src). 
  */
-size_t	ft_strlcpy(char *dest, const char *src, size_t size);
-
-
+size_t		ft_strlcpy(char *dest, const char *src, size_t size);
 //Concatenation
-
 /**
  * @brief The ft_strlcat() function appends the null-terminated string src to 
  * the end of dest (but no more than characters of length will be in the 
@@ -85,11 +78,8 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
  * tried to create. This is simply the length of the destination (before 
  * concatenation) plus the length of the source. 
  */
-size_t	ft_strlcat(char *dest, const char *src, size_t size);
-
-
+size_t		ft_strlcat(char *dest, const char *src, size_t size);
 //Comparison
-
 /**
  * @brief The ft_memcmp() function compares the first n bytes of memory area 
  * str1 and memory area str2.
@@ -100,8 +90,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size);
  * if Return value > 0 then it indicates str2 is less than str1.
  * if Return value = 0 then it indicates str1 is equal to str2.
  */
-int	ft_memcmp(const void *str1, const void *str2, size_t n);
-
+int			ft_memcmp(const void *str1, const void *str2, size_t n);
 /**
  * @brief The ft_strncmp() function compares at most the first n bytes of str1
  *  and str2.
@@ -112,11 +101,8 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n);
  * if Return value > 0 then it indicates str2 is less than str1.
  * if Return value = 0 then it indicates str1 is equal to str2.
  */
-int	ft_strncmp(const char *str1, const char *str2, size_t n);
-
-
+int			ft_strncmp(const char *str1, const char *str2, size_t n);
 //Search
-
 /**
  * @brief The ft_memchr() function searches for the first occurrence of the 
  * character c (an unsigned char) in the first n bytes of the string pointed to
@@ -129,8 +115,7 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n);
  * @return This function returns a pointer to the matching byte or NULL if the 
  * character does not occur in the given memory area.
  */
-void	*ft_memchr(const void *str, int c, size_t n);
-
+void		*ft_memchr(const void *str, int c, size_t n);
 /**
  * @brief The ft_strchr() function searches for the first occurrence of the 
  * character c (an unsigned char) in the string pointed to by the argument str.
@@ -139,8 +124,7 @@ void	*ft_memchr(const void *str, int c, size_t n);
  * @return This returns a pointer to the first occurrence of the character c 
  * in the string str, or NULL if the character is not found.
  */
-char	*ft_strchr(const char *str, int c);
-
+char		*ft_strchr(const char *str, int c);
 /**
  * @brief The ft_strrchr() function searches for the last occurrence of the 
  * character c (an unsigned char) in the string pointed to, by the argument 
@@ -151,8 +135,7 @@ char	*ft_strchr(const char *str, int c);
  * @return This function returns a pointer to the last occurrence of character 
  * in str. If the value is not found, the function returns a null pointer.
  */
-char	*ft_strrchr(const char *str, int c);
-
+char		*ft_strrchr(const char *str, int c);
 /**
  * @brief The ft_strnstr() function finds the first occurrence of the 
  * null-terminated string little in the large string, where the number of 
@@ -165,10 +148,8 @@ char	*ft_strrchr(const char *str, int c);
  * nowhere in big, NULL is returned; otherwise a pointer to the first character
  *  of the first occurrence of little is returned.
  */
-char	*ft_strnstr(const char *big, const char *little, size_t len);
-
+char		*ft_strnstr(const char *big, const char *little, size_t len);
 //Others
-
 /**
  * @brief The ft_memset() function copies the character c (an unsigned char) to
  *  the first n characters of the string pointed to, by the argument str.
@@ -179,25 +160,22 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
  * @param n This is the number of bytes to be set to the value.
  * @return This function returns a pointer to the memory area str.
  */
-void	*ft_memset(void *str, int c, size_t n);
-
+void		*ft_memset(void *str, int c, size_t n);
 /**
  * @brief The ft_strlen() function computes the length of the string str up to,
  *  but not including the terminating null character.
  * @param str This is the string whose length is to be found.
  * @return This function returns the length of string.
  */
-size_t	ft_strlen(const char *str);
-
+size_t		ft_strlen(const char *str);
 /**
  * @brief The ft_strdup() function is used to duplicate a string. It returns a 
  * pointer to null-terminated byte string.
  * @param str pointer to the null-terminated byte string to duplicate
  * @return A pointer to the newly allocated string, or a null pointer if an 
  * error occurred. 
- */ 
-char	*ft_strdup(const char *str);
-
+ */
+char		*ft_strdup(const char *str);
 /**
  * @brief The ft_bzero() function erases the data in the n bytes of the memory
  * starting at the location pointed to by s, by writing zeros (bytes
@@ -206,12 +184,8 @@ char	*ft_strdup(const char *str);
  * @param n size_t n numbers
  * @return None
  */
-void	ft_bzero(void *s, size_t n);
-
-
-
+void		ft_bzero(void *s, size_t n);
 //CHARACTER TYPE TESTS: CTYPE.H
-
 /**
  * @brief The ft_isalnum() function checks if the passed character is 
  * alphanumeric.
@@ -219,8 +193,7 @@ void	ft_bzero(void *s, size_t n);
  * @return This function returns non-zero value if c is a digit or a letter, 
  * else it returns 0.
  */
-int	ft_isalnum(int c);
-
+int			ft_isalnum(int c);
 /**
  * @brief The ft_isalpha() function checks if the passed character is 
  * alphabetic.
@@ -228,8 +201,7 @@ int	ft_isalnum(int c);
  * @return This function returns non-zero value if c is an alphabet, else it 
  * returns 0.
  */
-int	ft_isalpha(int c);
-
+int			ft_isalpha(int c);
 /** 
  * @brief The ft_isdigit() function checks if the passed character is
  *  a decimal digit character. Decimal digits are (numbers) − 0 1 2 3 4 5 6 7
@@ -238,8 +210,7 @@ int	ft_isalpha(int c);
  * @return This function returns non-zero value if c is a digit, else it 
  * returns 0.
  */
-int	ft_isdigit(int c);
-
+int			ft_isdigit(int c);
 /**
  * @brief The ft_isprint() function checks whether the passed character is 
  * printable. A printable character is a character that is not a control 
@@ -248,8 +219,7 @@ int	ft_isdigit(int c);
  * @return This function returns a non-zero value(true) if c is a printable 
  * character else, zero (false).
  */
-int	ft_isprint(int c);
-
+int			ft_isprint(int c);
 /**
  * @brief The ft_isascii() function tests if a given character, in the current 
  * locale, can be represented as a valid 7–bit US-ASCII character
@@ -258,8 +228,7 @@ int	ft_isprint(int c);
  * locale, can be represented as a character in the 7–bit US-ASCII character 
  * set. Otherwise, it returns 0.
  */
-int	ft_isascii(int c);
-
+int			ft_isascii(int c);
 /**
  * @brief The ft_tolower() function converts a given letter to lowercase.
  * @param c This is the letter to be converted to lowercase.
@@ -267,8 +236,7 @@ int	ft_isascii(int c);
  * exists, else c remains unchanged. The value is returned as an int value that
  *  can be implicitly casted to char.
  */
-int	ft_tolower(int c);
-
+int			ft_tolower(int c);
 /**
  * @brief The ft_toupper() function converts lowercase letter to uppercase.
  * @param c This is the letter to be converted to uppercase.
@@ -276,10 +244,7 @@ int	ft_tolower(int c);
  * exists, else c remains unchanged. The value is returned as an int value that
  *  can be implicitly casted to char.
  */
-int	ft_toupper(int c);
-
-
-
+int			ft_toupper(int c);
 //STANDARD UTILITY FUNCTIONS : CTYPE.H
 //Strings convertion
 /**
@@ -293,11 +258,8 @@ int	ft_toupper(int c);
  * an int value. If the converted value would be out of the range of 
  * representable values by an int, it causes undefined behavior.
  */
-int	ft_atoi(const char *str);
-
-
+int			ft_atoi(const char *str);
 //Dynamic memory management 
-
 /**
  * @brief The ft_calloc() function allocates the requested memory and returns a
  *  pointer to it. The difference in malloc and calloc is that malloc does not 
@@ -307,30 +269,62 @@ int	ft_atoi(const char *str);
  * @return This function returns a pointer to the allocated memory, or NULL if 
  * the request fails.
  */
-void	*ft_calloc(size_t nitems, size_t size);
-
-
+void		*ft_calloc(size_t nitems, size_t size);
 /* PART 2 */
 // CUSTOM FUNCTIONS: LIBFT.H
-
 /**
  * @brief The ft_substr() function creates a substring from the main string.For
  *  this it allocates the memory and delimits the substring starting at the 
  * value of start up to the informed length 
- * @param s const char pointer - this variable represent the main string
- * @param start unsigned int - this variable represent the substring start
- * @param len size_t - this variable represent the substring length
+ * @param s const char pointer - The string from which to create the substring.
+ * @param start unsigned int - The start index of the substring in the string
+’s’.
+ * @param len size_t - The maximum length of the substring.
  * @return The ft_substr() function returns the substring when its content is 
  * different from null, otherwise the return is NULL if the allocation fails.
  */
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-
+char		*ft_substr(char const *s, unsigned int start, size_t len);
 /**
- * 
+ * @brief ft_strjoin() concatenates two strings 's1' and 's2' with memory 
+ * allocation resulting from the sum of the length of the two strings 
+ * @param s1 const char - The prefix string.
+ * @param s2 const char - The suffix string.
+ * @return The function returns a new string result of str1 with str2 plus 1 
+ * for the null character. 
  */
-char	*ft_strjoin(char const *s1, char const *s2);
-
-void	ft_putstr_fd(char const *s, int fd);
-void	ft_putchar_fd(char c, int fd);
-
+char		*ft_strjoin(char const *s1, char const *s2);
+/**
+ * @brief The ft_strtrim() make a copy of 's1' with the characters specified in
+ *  'set' removed from the beginning and the end of the string.
+ * @param s1 a const char - The string to be trimmed.
+ * @param set a const char - The reference set of characters to trim.
+ * @return The trimmed string. NULL if the allocation fails.
+ */
+char		*ft_strtrim(char const *s1, char const *set);
+/**
+ * @brief The ft_split() function splits the source string using a delimiter. 
+ * The function also validates whether the delimiter is at the beginning or end
+ *  of the string, in order not to include these in the string division. 
+ * @param s a const char pointer - this variable represent a string
+ * @param c a char - this variable represent a delimiter character
+ * @return The array of new strings resulting from the split.NULL if the 
+ * allocation fails.
+ */
+char		**ft_split(char const *s, char c);
+/**
+ * @brief Outputs the character ’c’ to the given file descriptor.
+ * @param c char - this variable represent the character to output.
+ * @param fd int - this variable represent the file descriptor on which to 
+ * write.
+ * @return None
+ */
+void		ft_putchar_fd(char c, int fd);
+/**
+ * @brief Outputs the string ’s’ to the given file descriptor.
+ * @param s char pointer - this variable represent the string to output.
+ * @param fd int - this variable represent the file descriptor on which to 
+ * write.
+ * @return None
+ */
+void		ft_putstr_fd(char const *s, int fd);
 #endif
