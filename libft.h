@@ -6,7 +6,7 @@
 /*   By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 0021/07/29 22:48:50 by da-silv           #+#    #+#             */
-/*   Updated: 2021/08/30 22:06:28 by rda-silv         ###   ########.fr       */
+/*   Updated: 2021/09/01 19:14:09 by rda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -335,4 +335,16 @@ char		*ft_itoa(int n);
  * 
  */
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+/**
+ * 
+ */
+void		ft_striteri(char *s, void (*f)(unsigned int, char*));
+/**
+ * 
+ */
+void		ft_putendl_fd(char *s, int fd);
+/**
+ * 
+ */
+void		ft_putnbr_fd(int n, int fd);
 #endif
