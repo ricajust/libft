@@ -6,7 +6,7 @@
 /*   By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 20:45:55 by rda-silv          #+#    #+#             */
-/*   Updated: 2021/08/11 20:47:07 by rda-silv         ###   ########.fr       */
+/*   Updated: 2021/09/01 20:28:10 by rda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
+	if(!dest && !src)
+		return (0);
 	i = 0;
 	if (dest < src)
 	{
