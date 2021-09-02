@@ -6,7 +6,7 @@
 /*   By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 21:29:27 by rda-silv          #+#    #+#             */
-/*   Updated: 2021/08/30 22:07:54 by rda-silv         ###   ########.fr       */
+/*   Updated: 2021/09/01 21:26:29 by rda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	i;
 	char	*str;
 
+	if (!s)
+		return (NULL);
 	str = ft_strdup(s);
 	i = 0;
 	while (str[i] != '\0')
