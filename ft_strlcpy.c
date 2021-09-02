@@ -6,7 +6,7 @@
 /*   By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 11:23:09 by rda-silv          #+#    #+#             */
-/*   Updated: 2021/09/02 18:34:27 by rda-silv         ###   ########.fr       */
+/*   Updated: 2021/09/02 20:13:15 by rda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 	size_t	sizedest;
 
-	if (!dst || !src)
+	if (!src)
 		return (0);
 	sizedest = ft_strlen(src);
 	i = 0;
