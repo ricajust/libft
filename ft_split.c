@@ -6,7 +6,7 @@
 /*   By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 21:27:47 by rda-silv          #+#    #+#             */
-/*   Updated: 2021/09/02 21:39:58 by rda-silv         ###   ########.fr       */
+/*   Updated: 2021/09/02 22:01:25 by rda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ char	**ft_split(char const *s, char c)
 	size_t	wrd;
 	char	**spl;
 
+	if (!s)
+		return (0);
 	j = 0;
 	i = 0;
 	wrd = ft_cntwrd(s, c);
@@ -60,11 +62,8 @@ char	**ft_split(char const *s, char c)
 	{
 		if ((s[j] != c) && (s[j] != '\0'))
 		{
-			spl[i] = ft_substr(s, j, ft_wrdlen(&s[j], c));
-			if (!spl[i])
-				return (NULL);
+			spl[i++] = ft_substr(s, j, ft_wrdlen(&s[j], c));
 			j = (j + ft_wrdlen(&s[j], c) - 1);
-			i++;
 		}
 		j++;
 	}
