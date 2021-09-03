@@ -6,7 +6,7 @@
 /*   By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 21:27:47 by rda-silv          #+#    #+#             */
-/*   Updated: 2021/08/29 17:45:24 by rda-silv         ###   ########.fr       */
+/*   Updated: 2021/09/02 21:39:58 by rda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	i = 0;
 	wrd = ft_cntwrd(s, c);
-	spl = malloc((wrd + 1) * sizeof(char *));
-	if (spl == NULL)
+	spl = (char **)malloc((wrd + 1) * sizeof(char *));
+	if (!spl)
 		return (NULL);
 	while (s[j] != '\0')
 	{
