@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/02 21:23:31 by rda-silv          #+#    #+#             */
-/*   Updated: 2021/09/06 13:22:07 by rda-silv         ###   ########.fr       */
+/*   Created: 2021/08/22 19:53:35 by rda-silv          #+#    #+#             */
+/*   Updated: 2021/08/22 19:59:14 by rda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	size_t	i;
-	size_t	srclen;
+	unsigned char	*dest;
+	unsigned char	*srce;
 
-	srclen = ft_strlen(src);
-	if (!dest || !src)
-		return (0);
-	i = 0;
-	if (size != 0)
+	dest = (unsigned char *)dst;
+	srce = (unsigned char *)src;
+	while (n--)
 	{
-		while ((src[i] != '\0') && (i < (size - 1)))
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
+		*dest = *srce;
+		if (*dest == (unsigned char)c)
+			return (dest + 1);
+		dest++;
+		srce++;
 	}
-	return (srclen);
+	return (NULL);
 }

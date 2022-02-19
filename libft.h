@@ -6,7 +6,7 @@
 /*   By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 0021/07/29 22:48:50 by da-silv           #+#    #+#             */
-/*   Updated: 2021/09/07 21:32:15 by rda-silv         ###   ########.fr       */
+/*   Updated: 2021/09/01 19:14:09 by rda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,19 @@
  * @return This function returns a destination pointer (dest).
  */
 void		*ft_memcpy(void *dest, const void *src, size_t n);
+/**
+ * @brief The ft_memccpy() function copies 0 or more characters of src to dest,
+ *  halting when the character c has been copied or when count characters have 
+ * been copied, whichever comes first.
+ * @param dest Pointer to the destination.
+ * @param src Pointer to the source.
+ * @param c Last character to copy.
+ * @param n Number of characters.
+ * @return If the character c is copied, ft_memccpy() returns a pointer to the 
+ * char in dest that immediately follows the character. If c is not copied, it 
+ * returns NULL.
+ */
+void		*ft_memccpy(void *dest, const void *src, int c, size_t n);
 /**
  * @brief The ft_memmove() function copies n characters from src to dest, but 
  * for overlapping memory blocks, ft_memmove() is a safer approach than 
@@ -315,49 +328,23 @@ void		ft_putchar_fd(char c, int fd);
  */
 void		ft_putstr_fd(char const *s, int fd);
 /**
- * @brief Allocates (with malloc(3)) and returns a string
-representing the integer received as an argument.
-Negative numbers must be handled.
- * @param n the integer to convert.
- * @return The string representing the integer. NULL if the
-allocation fails.
+ * 
  */
 char		*ft_itoa(int n);
 /**
- * @brief Applies the function ’f’ to each character of the
-string ’s’ to create a new string (with malloc(3))
-resulting from successive applications of ’f’
- * @param s The string on which to iterate.
- * @param f The function to apply to each character.
- * @return The string created from the successive applications
-of ’f’. Returns NULL if the allocation fails.
+ * 
  */
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 /**
- * @brief Applies the function f to each character of the
-string passed as argument, and passing its index
-as first argument. Each character is passed by
-address to f to be modified if necessary
- * @param s The string on which to iterate.
- * @param f The function to apply to each character.
+ * 
  */
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 /**
- * @brief Outputs the string ’s’ to the given file
-descriptor, followed by a newline.
- * @param s The string to output.
- * @param fd The file descriptor on which to write.
- * @return Outputs the string ’s’ to the given file
-descriptor, followed by a newline.
+ * 
  */
 void		ft_putendl_fd(char *s, int fd);
 /**
- * @brief Outputs the integer ’n’ to the given file
-descriptor.
- * @param n The integer to output.
- * @param fd The file descriptor on which to write.
- * @return Outputs the integer ’n’ to the given file
-descriptor.
+ * 
  */
 void		ft_putnbr_fd(int n, int fd);
 #endif
