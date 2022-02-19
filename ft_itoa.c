@@ -6,7 +6,7 @@
 /*   By: rda-silv <rda-silv@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 17:28:02 by rda-silv          #+#    #+#             */
-/*   Updated: 2021/08/30 22:57:24 by rda-silv         ###   ########.fr       */
+/*   Updated: 2022/02/19 23:05:46 by rda-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,8 @@ char	*ft_itoa(int n)
 	nbr = n;
 	if (nbr < 0)
 	{
-		size = ft_size(nbr *= -1) + 2;
+		nbr *= -1;
+		size = ft_size(nbr) + 2;
 		str = (char *)malloc(size * sizeof(char));
 		if (!str)
 			return (NULL);
